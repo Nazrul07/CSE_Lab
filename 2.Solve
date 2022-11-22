@@ -1,0 +1,106 @@
+#include<iostream>
+using namespace std;
+class member
+{
+public:
+    string name,add,p_n;
+    int age;
+    double salary;
+    void printSalary()
+    {
+        cout<<"Salary: "<<salary<<endl;
+    }
+};
+class Employee:public member
+{
+public:
+    string specialization;
+    void speci()
+    {
+        cout<<"Specialization: ";
+        cin>>specialization;
+    }
+    void print_speci()
+    {
+        cout<<"Specialization: "<<specialization<<endl;
+    }
+    void input()
+    {
+        cout<<"Input for Employee"<<endl;
+        cout<<"Enter name: ";
+        cin>>name;
+        cout<<"Age: ";
+        cin>>age;
+        cout<<"Phone Number: ";
+        cin>>p_n;
+        cout<<"Address: ";
+        cin>>add;
+        cout<<"Salary :";
+        cin>>salary;
+    }
+    void print()
+    {
+        cout<<endl;
+        cout<<"Output for employee"<<endl;
+        cout<<"Name: "<<name<<endl;
+        cout<<"Age: "<<age<<endl;
+        cout<<"Phone Number: "<<p_n<<endl;
+        cout<<"Address: "<<add<<endl;
+    }
+};
+class Manager:public member
+{
+public:
+    string department;
+    void deprt()
+    {
+        cout<<"Department: ";
+        cin>>department;
+    }
+    void print_deprt()
+    {
+        cout<<"Department: "<<department<<endl;
+    }
+    void input()
+    {
+        cout<<endl;
+        cout<<"Input for Manager"<<endl;
+        cout<<"Enter name: ";
+        cin>>name;
+        cout<<"Age: ";
+        cin>>age;
+        cout<<"Phone Number: ";
+        cin>>p_n;
+        cout<<"Address: ";
+        cin>>add;
+        cout<<"Salary: ";
+        cin>>salary;
+    }
+    void print()
+    {
+        cout<<endl;
+        cout<<"Output for Manager"<<endl;
+        cout<<"Name: "<<name<<endl;
+        cout<<"Age: "<<age<<endl;
+        cout<<"Phone Number: "<<p_n<<endl;
+        cout<<"Address: "<<add<<endl;
+    }
+};
+int main()
+{
+    Employee o1;
+    Manager o2;
+    o1.input();
+    o1.speci();
+    o2.input();
+    o2.deprt();
+    cout<<endl;
+    o1.print();
+    o1.printSalary();
+    o1.print_speci();
+    cout<<endl;
+    o2.print();
+    o2.printSalary();
+    o2.print_deprt();
+    return 0;
+}
